@@ -47,4 +47,4 @@ class SimBotSimulation:
 
             self.current_stage += 1
 
-        print("\n✅ Simulation complete.")
+        print("\nSimulation complete.")

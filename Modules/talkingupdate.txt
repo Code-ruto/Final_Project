@@ -1,6 +1,3 @@
-# This file captures the dialog of the simbot depending on how the user answers. 
-# The flows contain a list with a dictionary of key-value pairs based on stage,
-# prompt responses, hints, and fallback dialog.
 
 SIMBOT_FLOW = [
     {
@@ -31,7 +28,7 @@ SIMBOT_FLOW = [
             "iv", "fluids", "oxygen", "medicine", "treatment",
             "blood test", "monitor", "help her breathe"
         ],
-        "prompt_if_asked": "Can you explain what the treatment is for?",
+        "prompt_if_asked": "Can you explain what the IV and oxygen are for?",
         "prompt_if_missed": "Why are you giving her that? Is it supposed to help?",
         "hint": "What are you doing to help her feel better?",
         "fallback": "I just want to know what you’re doing for her."
@@ -42,12 +39,15 @@ SIMBOT_FLOW = [
             "follow up", "next steps", "prevent", "medicine plan",
             "hematology", "come back", "watch for", "warning signs"
         ],
-        "prompt_if_asked": "Okay. Thank you for helping us.",
+        "prompt_if_asked": "Okay. What should I watch for after we leave?",
         "prompt_if_missed": "How can we stop this from happening again?",
         "hint": "I want to know what we should do once we go home.",
         "fallback": "Please tell me what we need to do after this."
     }
 ]
+```
+
+---
 
 
 BRITTANY_FLOW = [
@@ -76,10 +76,10 @@ BRITTANY_FLOW = [
     {
         "stage": "explain_treatment",
         "advance_keywords": [
-            "medicine", "oxygen", "fluids", "shot",
+            "iv", "medicine", "oxygen", "fluids", "shot",
             "help you", "make you feel better"
         ],
-        "prompt_if_asked": "Is that going to help me feel better?",
+        "prompt_if_asked": "Is that going to hurt?",
         "prompt_if_missed": "What is that for?",
         "hint": "What are you doing?",
         "fallback": "I’m scared... please tell me first."
@@ -90,17 +90,14 @@ BRITTANY_FLOW = [
             "take medicine", "stay healthy", "come back", "follow up",
             "feel better", "watch for", "tell your mom"
         ],
-        "prompt_if_asked": "I feel all better now. Thank you!",
+        "prompt_if_asked": "I don’t want to come back here again...",
         "prompt_if_missed": "Will I get sick again?",
         "hint": "Do I have to take medicine at home?",
         "fallback": "I just want to feel better."
     }
 ]
 
-def keyword_match(input_text, keywords):
-    return any(keyword in input_text for keyword in keywords)
+if any(keyword in user_input.lower() for keyword in current_stage["advance_keywords"]):
+    advance_stage()
 
-from .persona import Persona # Added Persona Class for future use
 
-SIMBOT_PERSONA = Persona("number one", SIMBOT_FLOW)
-BRITTANY_PERSONA = Persona("number two", BRITTANY_FLOW)

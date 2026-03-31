@@ -11,8 +11,10 @@ def select_persona():
     while True:
         user_input = listen_for_input().lower()
         if "number one" in user_input:
+            say("You chose Number One.")
             return SIMBOT_PERSONA
         elif "number two" in user_input:
+            say("You chose Number Two.")
             return BRITTANY_PERSONA
         else:
             say("Invalid choice. Please say 'Number One' or 'Number Two'.")

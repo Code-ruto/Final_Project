@@ -1,6 +1,10 @@
 import time
 from Modules.dialog import keyword_match
 
+# This code creates a class of the SimBot Personas and runs the simulation based on the dialog flows defined in Modules/dialog.py.
+# The logic of the simulation is to go through each stage of the dialog flow, listen for user input, and respond based on whether the input matches the advance keywords for that stage. If the user input matches, it advances to the next stage. If not, it provides prompts and hints to guide the user towards the correct response. The simulation can be exited at any time by saying "quit", "exit", or "stop".
+# Creating a class for the SimBot Simulation allows more personalities to be added in the future.
+
 
 class SimBotSimulation:
     def __init__(self, persona, say_func, listen_func):

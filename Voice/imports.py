@@ -1,3 +1,10 @@
+# Where the voice recognition happens. The speaking and listening functions are defined here as well. 
+# The say function uses the edge-tts library to convert text to speech and play it back using mpg321. 
+# The listen_for_input function uses the SpeechRecognition library to capture audio from the microphone and convert it to text using Google's speech recognition service. 
+# Both functions include error handling to manage potential issues with voice input and output.
+
+# !! Be sure edge-tts is updated to the latest version to avoid any issues with the Microsoft TTS API. You can update it using pip install --upgrade edge-tts !!
+
 import sys
 import shutil 
 import os
@@ -5,7 +12,6 @@ import contextlib
 import speech_recognition as sr
 import subprocess
 import time
-import logging
 import asyncio
 from edge_tts import Communicate
 

@@ -2,13 +2,13 @@
 
 A voice-interactive AI chatbot simulation application built with Python that features multiple personas and conversational AI capabilities.
 
-## 📋 Overview
+##  Overview
 
 SimBot Launcher is a Python-based conversational AI application that uses voice input/output to interact with users. I used the Python library edge-tts by Microsoft to generate responses with neural text-to-speech powered by Azure Cognitive Services.
 
 In 2025, I was selected to intern at Houston City College's Coleman campus. My capstone project is a conceptual chatbot that interacts with dialogue. The purpose of this project is to demonstrate potential uses for AI in assisting students undergoing simulation lab training at Houston City College.
 
-## 🎯 Features
+##  Features
 
 - **Voice Input/Output**: Integrated speech recognition and AI-powered text-to-speech capabilities
 - **Multiple Personas**: Choose between different conversation personalities (Number One, Number Two)
@@ -16,7 +16,7 @@ In 2025, I was selected to intern at Houston City College's Coleman campus. My c
 - **Conversational AI**: Simulated conversation engine with persona-based responses
 - **Neural TTS**: High-quality AI-generated speech using Microsoft Edge's neural engine
 
-## 🛠️ Technology Stack
+##  Tech Stack
 
 - **Language**: Python 3.11+
 - **Speech Recognition**: `SpeechRecognition`
@@ -24,7 +24,7 @@ In 2025, I was selected to intern at Houston City College's Coleman campus. My c
 - **Audio Processing**: `PyAudio`
 - **HTTP Client**: `aiohttp`
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 🚀 Usage
+##  Usage
 
 Run the application:
 ```bash
@@ -63,7 +63,7 @@ The application will:
 3. Process your input through the selected persona
 4. Respond with voice output and continue the conversation
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Final_Project/
@@ -113,11 +113,11 @@ The application listens for:
 - **"number two"** - Select the second persona
 
 
-## 📄 License
+##  License
 
 No license currently specified. See GitHub repository for more information.
 
-## 👤 Author
+##  Author
 
 [Code-ruto](https://github.com/Code-ruto)
 
